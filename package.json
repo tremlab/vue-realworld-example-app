@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "bugsnag-js": "^4.6.0",
+    "bugsnag-vue": "^1.0.1",
     "date-fns": "^1.29.0",
     "marked": "^0.3.17",
     "vue": "^2.5.8",

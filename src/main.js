@@ -2,6 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 
+// const bugsnag = require('bugsnag-js')
+import bugsnag from 'bugsnag-js'
+import bugsnagVue from 'bugsnag-vue'
+const bugsnagClient = bugsnag('2356d00da6d31eeccd1ebcf2ef867da3')
+bugsnagClient.use(bugsnagVue(Vue))
+// console.log(bugsnagClient)
+bugsnagClient.notify('hiiiii')
+
 import App from './App'
 import router from '@/router'
 import store from '@/store'
@@ -34,3 +42,7 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+// const bugsnagVue = require('bugsnag-vue')
+// bugsnagClient.use(bugsnagVue(Vue))
+// bugsnagClient.notify('hiiiii')
